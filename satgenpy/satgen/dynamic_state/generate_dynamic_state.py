@@ -187,7 +187,7 @@ def generate_dynamic_state_at(
     if enable_verbose_logs:
         print("\nGSL IN-RANGE INFORMATION")
 
-    #Generate txt file for gs topo for every timeframe
+    #Generate txt file for GS topo for every timeframe
     try:
         filename = "GStopo" +str(time)+ ".txt"
         with open(filename, 'w') as file:
@@ -217,7 +217,7 @@ def generate_dynamic_state_at(
             try:
                 with open(filename, 'a') as file:
             # Write the line to the file
-                    topo = ""+str(ground_station["gid"]+len(satellites))+"  "+str(sat[1]) 
+                    topo = ""+str(ground_station["gid"]+len(satellites))+" "+str(sat[1]) 
                     file.write(topo + '\n')                
             except Exception as e:
                 print("An error occurred when riting gs topo:", str(e)) 
